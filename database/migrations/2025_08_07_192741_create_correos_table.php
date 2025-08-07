@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('correo', 64);
             $table->string('clave', 32);
-            $table->timestamp('fecha_mail');
+            $table->timestamp('updated_at')->nullable();
+            $table->timestamp('created_at')->nullable();
         });
     }
 
