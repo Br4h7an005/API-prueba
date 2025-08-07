@@ -1,3 +1,18 @@
+Pasos para ver el proyecto
+
+1. Clonar el repositorio usando en la terminal el comando git clone {URL}.
+2. Crear el archivo .env en la terminal usando el comando: "cp .env.example .env" en la dirección de tu proyecto
+3. Instalar las dependencias usando el comando en la termianl: "composer install".
+4. Generar una APP_KEY del archivo .env usando el comando: "php artisan key:generate"
+5. Crear la base de datos usando phpMyAdmin con el nombre que le diste en el archivo .env(MYSQL).
+6. Hacer las migraciones usando el comando: "php artisan migrate".
+7. Ingresar los datos temporales hacia la tabla correos usando el comando en la terminal: "php artisan db:seed --class=CorreosSeeder".
+8. Iniciar el servidor local usando el comando: "php artisan serve"
+
+Para ver los correos en formato JSON nos dirigimos a la ruta "http://localhost:8000/api/correos".
+Y para pasar a la siguiente pagina y ver los demas correos usamos "http://localhost:8000/api/correos?page=2" (o 3)
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
